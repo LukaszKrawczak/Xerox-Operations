@@ -161,7 +161,6 @@ namespace xerox_operations_0._0._1.datacard
 
         private void OnTimer(object sender, ElapsedEventArgs e)
         {
-            Console.WriteLine("OnTimer");
             isWorking = false;
         }
 

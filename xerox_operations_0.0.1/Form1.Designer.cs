@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.buttonOk = new System.Windows.Forms.Button();
             this.labelFileStoreTnoNames = new System.Windows.Forms.Label();
             this.buttonClearLog = new System.Windows.Forms.Button();
@@ -139,7 +139,7 @@
             this.dc5RibbonLabel = new System.Windows.Forms.Label();
             this.buttonDeleteOrderOrSid = new System.Windows.Forms.Button();
             this.buttonBlockCurierLabels = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonReprocessSid = new System.Windows.Forms.Button();
             this.buttonPrintInstalments = new System.Windows.Forms.Button();
             this.label34 = new System.Windows.Forms.Label();
             this.buttonReprintLeaflet = new System.Windows.Forms.Button();
@@ -154,6 +154,7 @@
             this.labelFileStoreTnoCounter = new System.Windows.Forms.Label();
             this.labelFileMaterialsNames = new System.Windows.Forms.Label();
             this.labelFileMaterialsCounter = new System.Windows.Forms.Label();
+            this.openFileDialogReprocessSid = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.smPhaserLowPaperIndicator2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smPhaserLowPaperIndicator1)).BeginInit();
@@ -311,7 +312,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel1.Controls.Add(this.label19, 7, 0);
             this.tableLayoutPanel1.Controls.Add(this.label18, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.label17, 5, 0);
@@ -355,7 +356,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label13, 5, 4);
             this.tableLayoutPanel1.Controls.Add(this.label14, 5, 5);
             this.tableLayoutPanel1.Controls.Add(this.label16, 4, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 126);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 126);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
@@ -364,7 +365,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(535, 147);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(520, 147);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
             // label19
@@ -372,7 +373,7 @@
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label19.Location = new System.Drawing.Point(505, 2);
+            this.label19.Location = new System.Drawing.Point(498, 2);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(11, 12);
             this.label19.TabIndex = 28;
@@ -679,7 +680,7 @@
             // 
             this.smNv1FinishIndicator2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.smNv1FinishIndicator2.Image = global::xerox_operations.Properties.Resources.icon_done_indicator;
-            this.smNv1FinishIndicator2.Location = new System.Drawing.Point(501, 20);
+            this.smNv1FinishIndicator2.Location = new System.Drawing.Point(493, 20);
             this.smNv1FinishIndicator2.Name = "smNv1FinishIndicator2";
             this.smNv1FinishIndicator2.Size = new System.Drawing.Size(20, 19);
             this.smNv1FinishIndicator2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -690,7 +691,7 @@
             // 
             this.smNv2FinishIndicator2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.smNv2FinishIndicator2.Image = global::xerox_operations.Properties.Resources.icon_done_indicator;
-            this.smNv2FinishIndicator2.Location = new System.Drawing.Point(501, 46);
+            this.smNv2FinishIndicator2.Location = new System.Drawing.Point(493, 46);
             this.smNv2FinishIndicator2.Name = "smNv2FinishIndicator2";
             this.smNv2FinishIndicator2.Size = new System.Drawing.Size(20, 19);
             this.smNv2FinishIndicator2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -701,7 +702,7 @@
             // 
             this.smNv3FinishIndicator2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.smNv3FinishIndicator2.Image = global::xerox_operations.Properties.Resources.icon_done_indicator;
-            this.smNv3FinishIndicator2.Location = new System.Drawing.Point(501, 72);
+            this.smNv3FinishIndicator2.Location = new System.Drawing.Point(493, 72);
             this.smNv3FinishIndicator2.Name = "smNv3FinishIndicator2";
             this.smNv3FinishIndicator2.Size = new System.Drawing.Size(20, 19);
             this.smNv3FinishIndicator2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -712,7 +713,7 @@
             // 
             this.smNv4FinishIndicator2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.smNv4FinishIndicator2.Image = global::xerox_operations.Properties.Resources.icon_done_indicator;
-            this.smNv4FinishIndicator2.Location = new System.Drawing.Point(501, 98);
+            this.smNv4FinishIndicator2.Location = new System.Drawing.Point(493, 98);
             this.smNv4FinishIndicator2.Name = "smNv4FinishIndicator2";
             this.smNv4FinishIndicator2.Size = new System.Drawing.Size(20, 19);
             this.smNv4FinishIndicator2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -843,16 +844,16 @@
             // 
             this.printerStatusListView.BackColor = System.Drawing.SystemColors.Window;
             this.printerStatusListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            listViewGroup7.Header = "ListViewGroup";
-            listViewGroup7.Name = "listViewGroup1";
-            listViewGroup8.Header = "ListViewGroup";
-            listViewGroup8.Name = "listViewGroup2";
+            listViewGroup1.Header = "ListViewGroup";
+            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup2.Header = "ListViewGroup";
+            listViewGroup2.Name = "listViewGroup2";
             this.printerStatusListView.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup7,
-            listViewGroup8});
-            this.printerStatusListView.Location = new System.Drawing.Point(10, 272);
+            listViewGroup1,
+            listViewGroup2});
+            this.printerStatusListView.Location = new System.Drawing.Point(6, 272);
             this.printerStatusListView.Name = "printerStatusListView";
-            this.printerStatusListView.Size = new System.Drawing.Size(532, 147);
+            this.printerStatusListView.Size = new System.Drawing.Size(519, 147);
             this.printerStatusListView.TabIndex = 13;
             this.printerStatusListView.UseCompatibleStateImageBehavior = false;
             this.printerStatusListView.View = System.Windows.Forms.View.List;
@@ -863,9 +864,9 @@
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label20.Location = new System.Drawing.Point(558, 97);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(179, 25);
+            this.label20.Size = new System.Drawing.Size(205, 25);
             this.label20.TabIndex = 14;
-            this.label20.Text = "Monitoring plików";
+            this.label20.Text = "Monitoring Wave\'ów";
             // 
             // listView1
             // 
@@ -956,7 +957,7 @@
             this.label42.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label42.Location = new System.Drawing.Point(417, 123);
+            this.label42.Location = new System.Drawing.Point(408, 123);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(66, 20);
             this.label42.TabIndex = 24;
@@ -967,7 +968,7 @@
             this.label41.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label41.Location = new System.Drawing.Point(417, 97);
+            this.label41.Location = new System.Drawing.Point(408, 97);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(66, 20);
             this.label41.TabIndex = 23;
@@ -978,7 +979,7 @@
             this.label40.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label40.Location = new System.Drawing.Point(417, 71);
+            this.label40.Location = new System.Drawing.Point(408, 71);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(66, 20);
             this.label40.TabIndex = 22;
@@ -989,7 +990,7 @@
             this.label39.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label39.Location = new System.Drawing.Point(417, 45);
+            this.label39.Location = new System.Drawing.Point(408, 45);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(66, 20);
             this.label39.TabIndex = 21;
@@ -1121,7 +1122,7 @@
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label26.Location = new System.Drawing.Point(418, 2);
+            this.label26.Location = new System.Drawing.Point(410, 2);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(63, 12);
             this.label26.TabIndex = 26;
@@ -1139,7 +1140,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
             this.tableLayoutPanel2.Controls.Add(this.label33, 5, 6);
             this.tableLayoutPanel2.Controls.Add(this.dc7RibbonLabel, 3, 7);
             this.tableLayoutPanel2.Controls.Add(this.dc6RibbonLabel, 3, 6);
@@ -1184,7 +1185,7 @@
             this.tableLayoutPanel2.Controls.Add(this.dc2RibbonLabel, 3, 2);
             this.tableLayoutPanel2.Controls.Add(this.dc3RibbonLabel, 3, 3);
             this.tableLayoutPanel2.Controls.Add(this.dc5RibbonLabel, 3, 5);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(7, 473);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 474);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
@@ -1195,7 +1196,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(535, 199);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(518, 199);
             this.tableLayoutPanel2.TabIndex = 22;
             // 
             // label33
@@ -1203,7 +1204,7 @@
             this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label33.Location = new System.Drawing.Point(417, 148);
+            this.label33.Location = new System.Drawing.Point(408, 148);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(66, 20);
             this.label33.TabIndex = 25;
@@ -1520,16 +1521,17 @@
             this.buttonBlockCurierLabels.UseVisualStyleBackColor = true;
             this.buttonBlockCurierLabels.Click += new System.EventHandler(this.buttonBlockCurierLabels_Click);
             // 
-            // button2
+            // buttonReprocessSid
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button2.Location = new System.Drawing.Point(409, 8);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 50);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Ponowne przetwarzanie SIDa B2C";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonReprocessSid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonReprocessSid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonReprocessSid.Location = new System.Drawing.Point(409, 8);
+            this.buttonReprocessSid.Name = "buttonReprocessSid";
+            this.buttonReprocessSid.Size = new System.Drawing.Size(115, 50);
+            this.buttonReprocessSid.TabIndex = 25;
+            this.buttonReprocessSid.Text = "Ponowne przetwarzanie SIDa B2C";
+            this.buttonReprocessSid.UseVisualStyleBackColor = true;
+            this.buttonReprocessSid.Click += new System.EventHandler(this.buttonReprocessSid_Click);
             // 
             // buttonPrintInstalments
             // 
@@ -1584,7 +1586,7 @@
             this.tableLayoutPanel3.Controls.Add(this.pictureBox2, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.buttonPrintInstalments, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.buttonDeleteOrderOrSid, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button2, 7, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonReprocessSid, 7, 0);
             this.tableLayoutPanel3.Controls.Add(this.buttonBlockCurierLabels, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.pictureBox6, 3, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(10, 733);
@@ -1894,7 +1896,7 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Button buttonDeleteOrderOrSid;
         private System.Windows.Forms.Button buttonBlockCurierLabels;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonReprocessSid;
         private System.Windows.Forms.Button buttonPrintInstalments;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Button buttonReprintLeaflet;
@@ -1908,6 +1910,7 @@
         private System.Windows.Forms.Label labelFileStoreTnoCounter;
         private System.Windows.Forms.Label labelFileMaterialsNames;
         private System.Windows.Forms.Label labelFileMaterialsCounter;
+        private System.Windows.Forms.OpenFileDialog openFileDialogReprocessSid;
     }
 }
 

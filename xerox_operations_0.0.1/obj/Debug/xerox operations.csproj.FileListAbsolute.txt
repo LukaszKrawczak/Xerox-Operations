@@ -16,4 +16,4 @@ D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debu
 D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox operations.csproj.CopyComplete
 D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox_operations.exe
 D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox_operations.pdb
-D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox operations.csprojAssemblyReference.cache
+D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox_operations.ProgressBar.resources

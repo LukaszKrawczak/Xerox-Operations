@@ -46,7 +46,7 @@ namespace xerox_operations_0._0._1
             initDataCards();
             Load += MainForm_ChangeSize;
             new Clock(this);
-
+ 
             FileCounter fileCounterStoreTno = new FileCounter(this, Paths.STORE_TNO);
             fileCounterStoreTno.loadViewStoreTnoDelayed();
             
@@ -932,6 +932,11 @@ namespace xerox_operations_0._0._1
         private void buttonReprintLeaflet_Click(object sender, EventArgs e)
         {
             ButtonController.startAnotherApplication(@"C:\Jonit\wfd\smProd\si\prod-sm-InsertReprint.pl");
+        }
+
+        private void buttonReprocessSid_Click(object sender, EventArgs e)
+        {
+            new ReprocessSid(openFileDialogReprocessSid);
         }
 
         public void labelFileStoreTnoNames_TextChanged(string value)
