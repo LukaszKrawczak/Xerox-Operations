@@ -14,9 +14,7 @@ namespace xerox_operations_0._0._1
 {
     static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+        // The main entry point for the application.
         [STAThread]
         static void Main()
         {
@@ -64,7 +62,8 @@ namespace xerox_operations_0._0._1
                 onCreateWebRequest("http://localhost:19002/Communication/AddItem/");
                 onCreateWebRequest("http://localhost:19002/Communication/DeleteItem/");
                 onCreateWebRequest("http://localhost:19002/Communication/AddDriveProgress/");
-                onCreateWebRequest("http://localhost:19002/Communication/AddDriveFreeSpaceAvailable/");                
+                onCreateWebRequest("http://localhost:19002/Communication/AddDriveFreeSpaceAvailable/");
+                onCreateWebRequest("http://localhost:19002/Communication/AddGlassfishStatus/");
             }
             else
             {
