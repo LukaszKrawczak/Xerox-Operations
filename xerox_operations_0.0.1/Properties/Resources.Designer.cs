@@ -123,6 +123,16 @@ namespace xerox_operations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_done_indicator1 {
+            get {
+                object obj = ResourceManager.GetObject("icon_done_indicator1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_indicator_circle_dark_green {
             get {
                 object obj = ResourceManager.GetObject("icon_indicator_circle_dark_green", resourceCulture);

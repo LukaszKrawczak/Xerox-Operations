@@ -31,7 +31,6 @@ namespace xerox_operations_0._0._1
         private Printer nv4;
         private Printer phaser;
 
-
         ToolTip tip = new ToolTip();
         private string timeStamp = string.Format("{0:yyyy-MM-dd hh:mm:ss}", DateTime.Now);
 
@@ -52,7 +51,7 @@ namespace xerox_operations_0._0._1
             fileCounterMaterials.loadViewMaterialsDelayed();
         }
 
-        // Creating printers on different threads.
+        // Creating printer services on different threads.
         private void initPrinters()
         {
             nv1 = new Printer("nv1", Printers.IP_NV1);
@@ -81,7 +80,7 @@ namespace xerox_operations_0._0._1
             thread_5.Start();
         }
 
-        // Creating Datacards on different threads.
+        // Creating Datacards services on different threads.
         private void initDataCards()
         {
             Datacard dc2 = new Datacard("CD800-2", Datacards.IP_DC2, Datacards.NumID_SM_DC2);
@@ -110,7 +109,6 @@ namespace xerox_operations_0._0._1
             thread_11.Start();
         }
 
-
         // Poiting window to new Location at startup
         void MainForm_ChangeSize(object sender, EventArgs e)
         {
@@ -125,7 +123,6 @@ namespace xerox_operations_0._0._1
             b2b.clearLog();
             richTextBoxB2B_TextChanged(sender, e);
         }
-
 
         // Richbox B2B textChanger. This method add text and Scrolling down to the end.
         public void richTextBoxB2B_TextChanged(object sender, EventArgs e)
@@ -567,7 +564,6 @@ namespace xerox_operations_0._0._1
             printerStatusListView.Items.Clear();
         }
 
-
         // This method is responsible for hiding PictureBox from MainForm
         public void setVisibilityIndicator(PictureBox pictureBox, bool isEmpty)
         {
@@ -576,9 +572,7 @@ namespace xerox_operations_0._0._1
                 if (isEmpty) pictureBox.Show();
                 else pictureBox.Hide();
             });
-        }
-
-        
+        }       
 
         public void statusIndicatorRed(PictureBox pictureBox)
         {
@@ -600,6 +594,16 @@ namespace xerox_operations_0._0._1
             pictureBox.Image = Image.FromFile("../Image/icon_indicator_circle_dark_green.png");
         }
 
+        public void statusIndicatorFail(PictureBox pictureBox)
+        {
+            pictureBox.Image = Image.FromFile("../Image/icon_indicator_fail.png");
+        }
+
+        public void statusIndicatorOK(PictureBox pictureBox)
+        {
+            pictureBox.Image = Image.FromFile("../Image/icon_done_indicator.png");
+        }
+
         public void changeStatus(PictureBox pictureBox, int status)
         {
             switch (status)
@@ -615,6 +619,12 @@ namespace xerox_operations_0._0._1
                     break;
                 case 5:
                     statusIndicatorOrange(pictureBox);
+                    break;
+                case 6:
+                    statusIndicatorFail(pictureBox);
+                    break;
+                case 7:
+                    statusIndicatorOK(pictureBox);
                     break;
                 default:
                     statusIndicatorGreen(pictureBox);
@@ -716,6 +726,11 @@ namespace xerox_operations_0._0._1
             InvokeLabelFromThread(this.labelFileStoreTnoCounter, value);
         }
 
+        public void onFileStoreTnoCounterIndicator_Changed(int value)
+        {
+            changeStatus(this.fileStoreTnoCounterIndicator, value);
+        }
+
         public void labelFileMaterialsNames_TextChanged(string value)
         {
             InvokeLabelFromThread(this.labelFileMaterialsNames, value);
@@ -724,6 +739,32 @@ namespace xerox_operations_0._0._1
         public void labelFileMaterialsValues_TextChanged(string value)
         {
             InvokeLabelFromThread(this.labelFileMaterialsCounter, value);
+        }
+
+        public void onMaterialsPreprocessIndicator_Changed(int value)
+        {
+            changeStatus(this.materialsPreprocessedIndicator, value);
+        }
+
+        //labelGlassfishStatus
+        public void onGlassfishStatusLabelChanged(string status)
+        {
+            InvokeLabelFromThread(this.labelGlassfishStatus, status.ToString());
+        }
+
+        public void onGlassfishStatusIndicator_Changed(int value)
+        {
+            changeStatus(this.glassfishStatusIndicator, value);
+        }
+
+        private void fileMaterialsPanel_Click(object sender, EventArgs e)
+        {
+            ButtonController.startAnotherApplication(@"D:\Jonit_VAR\Prod\msgSM-X_Materials");
+        }
+
+        private void labelFileMaterialsNames_Click(object sender, EventArgs e)
+        {
+            ButtonController.startAnotherApplication(@"D:\Jonit_VAR\Prod\msgSM-X_Materials");
         }
     }
 }

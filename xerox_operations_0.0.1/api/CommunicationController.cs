@@ -36,6 +36,20 @@ namespace xerox_operations_0._0._1.api
             CommonObjects.mainFormReference.onDriveFreeSpaceAvailableLabelChanged(Int32.Parse(Item));
             return "OK";
         }
+
+        [HttpGet]
+        public string AddGlassfishStatus(String Item)
+        {
+            int value;
+            if (Item.Equals("True")) value = 7;
+            else value = 6;
+            CommonObjects.mainFormReference.onGlassfishStatusIndicator_Changed(value);
+
+            if (Item.Equals("True")) Item = "OK";
+            else Item = "Mamy problem!";
+            CommonObjects.mainFormReference.onGlassfishStatusLabelChanged(Item);
+            return "OK";
+        }
     }
 
     public class CommonObjects

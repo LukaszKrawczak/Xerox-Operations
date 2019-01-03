@@ -13,8 +13,7 @@ namespace xerox_operations_0._0._1
         private MainForm myForm;
 
         private FileSystemWatcher fsw;
-        public StringBuilder log;
-        private string timeStamp = string.Format("{0:yyyy-MM-dd hh:mm:ss}", DateTime.Now);
+        public StringBuilder log;       
         private string directoryPath;
 
         public DirectoryMonitor(MainForm f, string directoryPath)
@@ -42,8 +41,8 @@ namespace xerox_operations_0._0._1
 
         private void OnChanged(object sender, FileSystemEventArgs e)
         {
-            string mgs = string.Format(e.ChangeType + " - " + timeStamp + " - " + "{0}", e.Name);
-
+            string mgs = string.Format(e.ChangeType + " - " + string.Format("{0:yyyy-MM-dd hh:mm:ss}", DateTime.Now) + " - " + "{0}", e.Name);
+            
             if (e.ChangeType.ToString().Equals("Created"))
             {
                 log.Append(mgs + "\r\n");
@@ -63,7 +62,7 @@ namespace xerox_operations_0._0._1
 
         private void OnDeleted(object sender, FileSystemEventArgs e)
         {
-            string mgs = string.Format("Deleted - " + timeStamp + " - " + "{0}", e.Name);
+            string mgs = string.Format("Deleted - " + string.Format("{0:yyyy-MM-dd hh:mm:ss}", DateTime.Now) + " - " + "{0}", e.Name);
             log.Append(mgs + "\r\n");
 
             switch (directoryPath)

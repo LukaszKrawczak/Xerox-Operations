@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.buttonOk = new System.Windows.Forms.Button();
             this.labelFileStoreTnoNames = new System.Windows.Forms.Label();
             this.buttonClearLog = new System.Windows.Forms.Button();
@@ -155,6 +155,15 @@
             this.labelFileMaterialsNames = new System.Windows.Forms.Label();
             this.labelFileMaterialsCounter = new System.Windows.Forms.Label();
             this.openFileDialogReprocessSid = new System.Windows.Forms.OpenFileDialog();
+            this.labelGlassfishStatus = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.fileStoreTnoCounterIndicator = new System.Windows.Forms.PictureBox();
+            this.materialsPreprocessedIndicator = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.glassfishStatusIndicator = new System.Windows.Forms.PictureBox();
+            this.storeTnoPanel = new System.Windows.Forms.Panel();
+            this.fileMaterialsPanel = new System.Windows.Forms.Panel();
+            this.glassFishStatusPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.smPhaserLowPaperIndicator2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smPhaserLowPaperIndicator1)).BeginInit();
@@ -202,6 +211,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileStoreTnoCounterIndicator)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialsPreprocessedIndicator)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glassfishStatusIndicator)).BeginInit();
+            this.storeTnoPanel.SuspendLayout();
+            this.fileMaterialsPanel.SuspendLayout();
+            this.glassFishStatusPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonOk
@@ -218,7 +234,7 @@
             // 
             this.labelFileStoreTnoNames.AutoSize = true;
             this.labelFileStoreTnoNames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelFileStoreTnoNames.Location = new System.Drawing.Point(560, 475);
+            this.labelFileStoreTnoNames.Location = new System.Drawing.Point(-4, 0);
             this.labelFileStoreTnoNames.Name = "labelFileStoreTnoNames";
             this.labelFileStoreTnoNames.Size = new System.Drawing.Size(71, 20);
             this.labelFileStoreTnoNames.TabIndex = 1;
@@ -312,7 +328,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tableLayoutPanel1.Controls.Add(this.label19, 7, 0);
             this.tableLayoutPanel1.Controls.Add(this.label18, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.label17, 5, 0);
@@ -356,7 +372,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label13, 5, 4);
             this.tableLayoutPanel1.Controls.Add(this.label14, 5, 5);
             this.tableLayoutPanel1.Controls.Add(this.label16, 4, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 126);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 126);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
@@ -365,7 +381,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(520, 147);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(522, 147);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
             // label19
@@ -373,7 +389,7 @@
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label19.Location = new System.Drawing.Point(498, 2);
+            this.label19.Location = new System.Drawing.Point(499, 2);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(11, 12);
             this.label19.TabIndex = 28;
@@ -525,7 +541,6 @@
             // smPhaserStatusIndicator
             // 
             this.smPhaserStatusIndicator.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.smPhaserStatusIndicator.Image = global::xerox_operations.Properties.Resources.icon_indicator_orange;
             this.smPhaserStatusIndicator.Location = new System.Drawing.Point(6, 124);
             this.smPhaserStatusIndicator.Name = "smPhaserStatusIndicator";
             this.smPhaserStatusIndicator.Size = new System.Drawing.Size(20, 19);
@@ -538,7 +553,6 @@
             // smNv4StatusIndicator
             // 
             this.smNv4StatusIndicator.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.smNv4StatusIndicator.Image = global::xerox_operations.Properties.Resources.icon_indicator_orange;
             this.smNv4StatusIndicator.Location = new System.Drawing.Point(6, 98);
             this.smNv4StatusIndicator.Name = "smNv4StatusIndicator";
             this.smNv4StatusIndicator.Size = new System.Drawing.Size(20, 19);
@@ -551,7 +565,6 @@
             // smNv3StatusIndicator
             // 
             this.smNv3StatusIndicator.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.smNv3StatusIndicator.Image = global::xerox_operations.Properties.Resources.icon_indicator_orange;
             this.smNv3StatusIndicator.Location = new System.Drawing.Point(6, 72);
             this.smNv3StatusIndicator.Name = "smNv3StatusIndicator";
             this.smNv3StatusIndicator.Size = new System.Drawing.Size(20, 19);
@@ -564,7 +577,6 @@
             // smNv2StatusIndicator
             // 
             this.smNv2StatusIndicator.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.smNv2StatusIndicator.Image = global::xerox_operations.Properties.Resources.icon_indicator_orange;
             this.smNv2StatusIndicator.Location = new System.Drawing.Point(6, 46);
             this.smNv2StatusIndicator.Name = "smNv2StatusIndicator";
             this.smNv2StatusIndicator.Size = new System.Drawing.Size(20, 19);
@@ -632,7 +644,6 @@
             // smNv1StatusIndicator
             // 
             this.smNv1StatusIndicator.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.smNv1StatusIndicator.Image = global::xerox_operations.Properties.Resources.icon_indicator_orange;
             this.smNv1StatusIndicator.ImageLocation = "";
             this.smNv1StatusIndicator.Location = new System.Drawing.Point(6, 20);
             this.smNv1StatusIndicator.Name = "smNv1StatusIndicator";
@@ -679,8 +690,8 @@
             // smNv1FinishIndicator2
             // 
             this.smNv1FinishIndicator2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.smNv1FinishIndicator2.Image = global::xerox_operations.Properties.Resources.icon_done_indicator;
-            this.smNv1FinishIndicator2.Location = new System.Drawing.Point(493, 20);
+            this.smNv1FinishIndicator2.Image = global::xerox_operations.Properties.Resources.icon_done_indicator1;
+            this.smNv1FinishIndicator2.Location = new System.Drawing.Point(494, 20);
             this.smNv1FinishIndicator2.Name = "smNv1FinishIndicator2";
             this.smNv1FinishIndicator2.Size = new System.Drawing.Size(20, 19);
             this.smNv1FinishIndicator2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -690,8 +701,8 @@
             // smNv2FinishIndicator2
             // 
             this.smNv2FinishIndicator2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.smNv2FinishIndicator2.Image = global::xerox_operations.Properties.Resources.icon_done_indicator;
-            this.smNv2FinishIndicator2.Location = new System.Drawing.Point(493, 46);
+            this.smNv2FinishIndicator2.Image = global::xerox_operations.Properties.Resources.icon_done_indicator1;
+            this.smNv2FinishIndicator2.Location = new System.Drawing.Point(494, 46);
             this.smNv2FinishIndicator2.Name = "smNv2FinishIndicator2";
             this.smNv2FinishIndicator2.Size = new System.Drawing.Size(20, 19);
             this.smNv2FinishIndicator2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -701,8 +712,8 @@
             // smNv3FinishIndicator2
             // 
             this.smNv3FinishIndicator2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.smNv3FinishIndicator2.Image = global::xerox_operations.Properties.Resources.icon_done_indicator;
-            this.smNv3FinishIndicator2.Location = new System.Drawing.Point(493, 72);
+            this.smNv3FinishIndicator2.Image = global::xerox_operations.Properties.Resources.icon_done_indicator1;
+            this.smNv3FinishIndicator2.Location = new System.Drawing.Point(494, 72);
             this.smNv3FinishIndicator2.Name = "smNv3FinishIndicator2";
             this.smNv3FinishIndicator2.Size = new System.Drawing.Size(20, 19);
             this.smNv3FinishIndicator2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -712,8 +723,8 @@
             // smNv4FinishIndicator2
             // 
             this.smNv4FinishIndicator2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.smNv4FinishIndicator2.Image = global::xerox_operations.Properties.Resources.icon_done_indicator;
-            this.smNv4FinishIndicator2.Location = new System.Drawing.Point(493, 98);
+            this.smNv4FinishIndicator2.Image = global::xerox_operations.Properties.Resources.icon_done_indicator1;
+            this.smNv4FinishIndicator2.Location = new System.Drawing.Point(494, 98);
             this.smNv4FinishIndicator2.Name = "smNv4FinishIndicator2";
             this.smNv4FinishIndicator2.Size = new System.Drawing.Size(20, 19);
             this.smNv4FinishIndicator2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -723,7 +734,7 @@
             // smNv4FinishIndicator1
             // 
             this.smNv4FinishIndicator1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.smNv4FinishIndicator1.Image = global::xerox_operations.Properties.Resources.icon_done_indicator;
+            this.smNv4FinishIndicator1.Image = global::xerox_operations.Properties.Resources.icon_done_indicator1;
             this.smNv4FinishIndicator1.Location = new System.Drawing.Point(462, 98);
             this.smNv4FinishIndicator1.Name = "smNv4FinishIndicator1";
             this.smNv4FinishIndicator1.Size = new System.Drawing.Size(20, 19);
@@ -734,7 +745,7 @@
             // smNv3FinishIndicator1
             // 
             this.smNv3FinishIndicator1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.smNv3FinishIndicator1.Image = global::xerox_operations.Properties.Resources.icon_done_indicator;
+            this.smNv3FinishIndicator1.Image = global::xerox_operations.Properties.Resources.icon_done_indicator1;
             this.smNv3FinishIndicator1.Location = new System.Drawing.Point(462, 72);
             this.smNv3FinishIndicator1.Name = "smNv3FinishIndicator1";
             this.smNv3FinishIndicator1.Size = new System.Drawing.Size(20, 19);
@@ -745,7 +756,7 @@
             // smNv2FinishIndicator1
             // 
             this.smNv2FinishIndicator1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.smNv2FinishIndicator1.Image = global::xerox_operations.Properties.Resources.icon_done_indicator;
+            this.smNv2FinishIndicator1.Image = global::xerox_operations.Properties.Resources.icon_done_indicator1;
             this.smNv2FinishIndicator1.Location = new System.Drawing.Point(462, 46);
             this.smNv2FinishIndicator1.Name = "smNv2FinishIndicator1";
             this.smNv2FinishIndicator1.Size = new System.Drawing.Size(20, 19);
@@ -756,7 +767,7 @@
             // smNv1FinishIndicator1
             // 
             this.smNv1FinishIndicator1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.smNv1FinishIndicator1.Image = global::xerox_operations.Properties.Resources.icon_done_indicator;
+            this.smNv1FinishIndicator1.Image = global::xerox_operations.Properties.Resources.icon_done_indicator1;
             this.smNv1FinishIndicator1.Location = new System.Drawing.Point(462, 20);
             this.smNv1FinishIndicator1.Name = "smNv1FinishIndicator1";
             this.smNv1FinishIndicator1.Size = new System.Drawing.Size(20, 19);
@@ -844,13 +855,13 @@
             // 
             this.printerStatusListView.BackColor = System.Drawing.SystemColors.Window;
             this.printerStatusListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
-            listViewGroup2.Header = "ListViewGroup";
-            listViewGroup2.Name = "listViewGroup2";
+            listViewGroup3.Header = "ListViewGroup";
+            listViewGroup3.Name = "listViewGroup1";
+            listViewGroup4.Header = "ListViewGroup";
+            listViewGroup4.Name = "listViewGroup2";
             this.printerStatusListView.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2});
+            listViewGroup3,
+            listViewGroup4});
             this.printerStatusListView.Location = new System.Drawing.Point(6, 272);
             this.printerStatusListView.Name = "printerStatusListView";
             this.printerStatusListView.Size = new System.Drawing.Size(519, 147);
@@ -957,7 +968,7 @@
             this.label42.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label42.Location = new System.Drawing.Point(408, 123);
+            this.label42.Location = new System.Drawing.Point(412, 123);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(66, 20);
             this.label42.TabIndex = 24;
@@ -968,7 +979,7 @@
             this.label41.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label41.Location = new System.Drawing.Point(408, 97);
+            this.label41.Location = new System.Drawing.Point(412, 97);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(66, 20);
             this.label41.TabIndex = 23;
@@ -979,7 +990,7 @@
             this.label40.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label40.Location = new System.Drawing.Point(408, 71);
+            this.label40.Location = new System.Drawing.Point(412, 71);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(66, 20);
             this.label40.TabIndex = 22;
@@ -990,7 +1001,7 @@
             this.label39.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label39.Location = new System.Drawing.Point(408, 45);
+            this.label39.Location = new System.Drawing.Point(412, 45);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(66, 20);
             this.label39.TabIndex = 21;
@@ -1122,7 +1133,7 @@
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label26.Location = new System.Drawing.Point(410, 2);
+            this.label26.Location = new System.Drawing.Point(413, 2);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(63, 12);
             this.label26.TabIndex = 26;
@@ -1140,7 +1151,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 158F));
             this.tableLayoutPanel2.Controls.Add(this.label33, 5, 6);
             this.tableLayoutPanel2.Controls.Add(this.dc7RibbonLabel, 3, 7);
             this.tableLayoutPanel2.Controls.Add(this.dc6RibbonLabel, 3, 6);
@@ -1185,7 +1196,7 @@
             this.tableLayoutPanel2.Controls.Add(this.dc2RibbonLabel, 3, 2);
             this.tableLayoutPanel2.Controls.Add(this.dc3RibbonLabel, 3, 3);
             this.tableLayoutPanel2.Controls.Add(this.dc5RibbonLabel, 3, 5);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 474);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(-2, 474);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
@@ -1196,7 +1207,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(518, 199);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(525, 199);
             this.tableLayoutPanel2.TabIndex = 22;
             // 
             // label33
@@ -1204,7 +1215,7 @@
             this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label33.Location = new System.Drawing.Point(408, 148);
+            this.label33.Location = new System.Drawing.Point(412, 148);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(66, 20);
             this.label33.TabIndex = 25;
@@ -1671,7 +1682,7 @@
             // 
             this.labelFileStoreTnoCounter.AutoSize = true;
             this.labelFileStoreTnoCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelFileStoreTnoCounter.Location = new System.Drawing.Point(753, 475);
+            this.labelFileStoreTnoCounter.Location = new System.Drawing.Point(213, 0);
             this.labelFileStoreTnoCounter.Name = "labelFileStoreTnoCounter";
             this.labelFileStoreTnoCounter.Size = new System.Drawing.Size(0, 20);
             this.labelFileStoreTnoCounter.TabIndex = 31;
@@ -1680,29 +1691,122 @@
             // 
             this.labelFileMaterialsNames.AutoSize = true;
             this.labelFileMaterialsNames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelFileMaterialsNames.Location = new System.Drawing.Point(560, 556);
+            this.labelFileMaterialsNames.Location = new System.Drawing.Point(-4, 0);
             this.labelFileMaterialsNames.Name = "labelFileMaterialsNames";
             this.labelFileMaterialsNames.Size = new System.Drawing.Size(71, 20);
             this.labelFileMaterialsNames.TabIndex = 32;
             this.labelFileMaterialsNames.Text = "Ładuję...";
+            this.labelFileMaterialsNames.Click += new System.EventHandler(this.labelFileMaterialsNames_Click);
             // 
             // labelFileMaterialsCounter
             // 
             this.labelFileMaterialsCounter.AutoSize = true;
             this.labelFileMaterialsCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelFileMaterialsCounter.Location = new System.Drawing.Point(753, 556);
+            this.labelFileMaterialsCounter.Location = new System.Drawing.Point(213, 0);
             this.labelFileMaterialsCounter.Name = "labelFileMaterialsCounter";
             this.labelFileMaterialsCounter.Size = new System.Drawing.Size(0, 20);
             this.labelFileMaterialsCounter.TabIndex = 33;
+            // 
+            // labelGlassfishStatus
+            // 
+            this.labelGlassfishStatus.AutoSize = true;
+            this.labelGlassfishStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelGlassfishStatus.Location = new System.Drawing.Point(213, -2);
+            this.labelGlassfishStatus.Name = "labelGlassfishStatus";
+            this.labelGlassfishStatus.Size = new System.Drawing.Size(0, 20);
+            this.labelGlassfishStatus.TabIndex = 34;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox7.Location = new System.Drawing.Point(190, 23);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 35;
+            this.pictureBox7.TabStop = false;
+            // 
+            // fileStoreTnoCounterIndicator
+            // 
+            this.fileStoreTnoCounterIndicator.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.fileStoreTnoCounterIndicator.Location = new System.Drawing.Point(190, 43);
+            this.fileStoreTnoCounterIndicator.Name = "fileStoreTnoCounterIndicator";
+            this.fileStoreTnoCounterIndicator.Size = new System.Drawing.Size(15, 15);
+            this.fileStoreTnoCounterIndicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fileStoreTnoCounterIndicator.TabIndex = 36;
+            this.fileStoreTnoCounterIndicator.TabStop = false;
+            // 
+            // materialsPreprocessedIndicator
+            // 
+            this.materialsPreprocessedIndicator.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialsPreprocessedIndicator.Location = new System.Drawing.Point(190, 23);
+            this.materialsPreprocessedIndicator.Name = "materialsPreprocessedIndicator";
+            this.materialsPreprocessedIndicator.Size = new System.Drawing.Size(15, 15);
+            this.materialsPreprocessedIndicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.materialsPreprocessedIndicator.TabIndex = 37;
+            this.materialsPreprocessedIndicator.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label1.Location = new System.Drawing.Point(-4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 20);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Glassfish status:";
+            // 
+            // glassfishStatusIndicator
+            // 
+            this.glassfishStatusIndicator.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.glassfishStatusIndicator.Location = new System.Drawing.Point(191, 1);
+            this.glassfishStatusIndicator.Name = "glassfishStatusIndicator";
+            this.glassfishStatusIndicator.Size = new System.Drawing.Size(15, 15);
+            this.glassfishStatusIndicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.glassfishStatusIndicator.TabIndex = 39;
+            this.glassfishStatusIndicator.TabStop = false;
+            // 
+            // storeTnoPanel
+            // 
+            this.storeTnoPanel.Controls.Add(this.labelFileStoreTnoNames);
+            this.storeTnoPanel.Controls.Add(this.labelFileStoreTnoCounter);
+            this.storeTnoPanel.Controls.Add(this.pictureBox7);
+            this.storeTnoPanel.Controls.Add(this.fileStoreTnoCounterIndicator);
+            this.storeTnoPanel.Location = new System.Drawing.Point(563, 479);
+            this.storeTnoPanel.Name = "storeTnoPanel";
+            this.storeTnoPanel.Size = new System.Drawing.Size(260, 60);
+            this.storeTnoPanel.TabIndex = 40;
+            // 
+            // fileMaterialsPanel
+            // 
+            this.fileMaterialsPanel.Controls.Add(this.labelFileMaterialsNames);
+            this.fileMaterialsPanel.Controls.Add(this.labelFileMaterialsCounter);
+            this.fileMaterialsPanel.Controls.Add(this.materialsPreprocessedIndicator);
+            this.fileMaterialsPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fileMaterialsPanel.Location = new System.Drawing.Point(563, 554);
+            this.fileMaterialsPanel.Name = "fileMaterialsPanel";
+            this.fileMaterialsPanel.Size = new System.Drawing.Size(260, 60);
+            this.fileMaterialsPanel.TabIndex = 41;
+            this.fileMaterialsPanel.Click += new System.EventHandler(this.fileMaterialsPanel_Click);
+            // 
+            // glassFishStatusPanel
+            // 
+            this.glassFishStatusPanel.Controls.Add(this.label1);
+            this.glassFishStatusPanel.Controls.Add(this.labelGlassfishStatus);
+            this.glassFishStatusPanel.Controls.Add(this.glassfishStatusIndicator);
+            this.glassFishStatusPanel.Location = new System.Drawing.Point(563, 629);
+            this.glassFishStatusPanel.Name = "glassFishStatusPanel";
+            this.glassFishStatusPanel.Size = new System.Drawing.Size(260, 60);
+            this.glassFishStatusPanel.TabIndex = 42;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1023, 1001);
-            this.Controls.Add(this.labelFileMaterialsCounter);
-            this.Controls.Add(this.labelFileMaterialsNames);
-            this.Controls.Add(this.labelFileStoreTnoCounter);
+            this.Controls.Add(this.glassFishStatusPanel);
+            this.Controls.Add(this.fileMaterialsPanel);
+            this.Controls.Add(this.storeTnoPanel);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.label34);
@@ -1724,7 +1828,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.richTextBoxB2B);
             this.Controls.Add(this.buttonClearLog);
-            this.Controls.Add(this.labelFileStoreTnoNames);
             this.Controls.Add(this.buttonOk);
             this.Name = "MainForm";
             this.Text = "Xerox Operations";
@@ -1779,6 +1882,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileStoreTnoCounterIndicator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialsPreprocessedIndicator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glassfishStatusIndicator)).EndInit();
+            this.storeTnoPanel.ResumeLayout(false);
+            this.storeTnoPanel.PerformLayout();
+            this.fileMaterialsPanel.ResumeLayout(false);
+            this.fileMaterialsPanel.PerformLayout();
+            this.glassFishStatusPanel.ResumeLayout(false);
+            this.glassFishStatusPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1911,6 +2024,15 @@
         private System.Windows.Forms.Label labelFileMaterialsNames;
         private System.Windows.Forms.Label labelFileMaterialsCounter;
         private System.Windows.Forms.OpenFileDialog openFileDialogReprocessSid;
+        private System.Windows.Forms.Label labelGlassfishStatus;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox fileStoreTnoCounterIndicator;
+        private System.Windows.Forms.PictureBox materialsPreprocessedIndicator;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox glassfishStatusIndicator;
+        private System.Windows.Forms.Panel storeTnoPanel;
+        private System.Windows.Forms.Panel fileMaterialsPanel;
+        private System.Windows.Forms.Panel glassFishStatusPanel;
     }
 }
 

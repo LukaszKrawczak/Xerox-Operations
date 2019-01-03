@@ -51,7 +51,7 @@ namespace xerox_operations.utils
 
         private void OnChangedMaterials(object sender, FileSystemEventArgs e)
         {
-            mainForm.labelFileMaterialsValues_TextChanged(getNameMaterials());
+            mainForm.labelFileMaterialsValues_TextChanged(getValuesMaterials());
         }
 
         public void loadViewMaterialsDelayed()
@@ -63,6 +63,7 @@ namespace xerox_operations.utils
         {
             mainForm.labelFileMaterialsNames_TextChanged(getNameMaterials());
             mainForm.labelFileMaterialsValues_TextChanged(getValuesMaterials());
+            
         }
 
         private string getNameMaterials()
@@ -76,6 +77,7 @@ namespace xerox_operations.utils
 
         private string getValuesMaterials()
         {
+            changeMaterialsIcon(getPdfNumber());
             StringBuilder builder = new StringBuilder();
             builder.Append(Environment.NewLine);
             builder.Append(getPdfNumber());
@@ -96,13 +98,20 @@ namespace xerox_operations.utils
 
 
 
+        private void changeMaterialsIcon(int value)
+        {
+            if (value > 0) mainForm.onMaterialsPreprocessIndicator_Changed(6);
+            else mainForm.onMaterialsPreprocessIndicator_Changed(7);
+        }
 
 
 
 
-
-
-
+        private void changeStoreTnoIcon(int value)
+        {
+            if (value > 0) mainForm.onFileStoreTnoCounterIndicator_Changed(6);
+            else mainForm.onFileStoreTnoCounterIndicator_Changed(7);
+        }
 
 
 
@@ -155,6 +164,7 @@ namespace xerox_operations.utils
 
         private string storeTnoValues()
         {
+            changeStoreTnoIcon(getEmptyFiles());
             StringBuilder builder = new StringBuilder();
             builder.Append(Environment.NewLine);
             builder.Append(getDirectoryFilesNumber().ToString());
