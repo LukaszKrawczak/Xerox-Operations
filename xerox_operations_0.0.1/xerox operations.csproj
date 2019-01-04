@@ -109,6 +109,7 @@
     <Compile Include="utils\file_counters\CounterValue.cs" />
     <Compile Include="utils\file_counters\FileCounter.cs" />
     <Compile Include="utils\file_counters\StoreTno.cs" />
+    <Compile Include="utils\LaczeV5Log.cs" />
     <Compile Include="utils\ReprocessSid.cs" />
     <Compile Include="values\Datacards.cs" />
     <Compile Include="values\Paths.cs" />

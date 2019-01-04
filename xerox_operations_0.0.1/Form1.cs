@@ -30,7 +30,7 @@ namespace xerox_operations_0._0._1
         private Printer nv3;
         private Printer nv4;
         private Printer phaser;
-
+        private LaczeV5Log log;
         ToolTip tip = new ToolTip();
         private string timeStamp = string.Format("{0:yyyy-MM-dd hh:mm:ss}", DateTime.Now);
 
@@ -49,6 +49,8 @@ namespace xerox_operations_0._0._1
             
             FileCounter fileCounterMaterials = new FileCounter(this, Paths.MATERIALS);
             fileCounterMaterials.loadViewMaterialsDelayed();
+
+            log = new LaczeV5Log(this);
         }
 
         // Creating printer services on different threads.
@@ -632,14 +634,6 @@ namespace xerox_operations_0._0._1
             }
         }
 
-        //public void addItemToMethod(string item)
-        //{
-        //    Invoke((MethodInvoker)delegate
-        //    {
-        //        this.listView1.Items.Add(item);
-        //    });
-        //}
-
         public void onDriveProgressBar(int progress)
         {
             Invoke((MethodInvoker)delegate
@@ -765,6 +759,16 @@ namespace xerox_operations_0._0._1
         private void labelFileMaterialsNames_Click(object sender, EventArgs e)
         {
             ButtonController.startAnotherApplication(@"D:\Jonit_VAR\Prod\msgSM-X_Materials");
+        }
+
+        public void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            Invoke((MethodInvoker)delegate
+            {
+                this.richTextBox1.Text = log.getLog();
+                this.richTextBox1.SelectionStart = this.richTextBox1.Text.Length;
+                this.richTextBox1.ScrollToCaret();
+            });
         }
     }
 }
