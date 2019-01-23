@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using xerox_operations.api;
 
 namespace xerox_operations_0._0._1
 {
@@ -41,11 +42,12 @@ namespace xerox_operations_0._0._1
 
         private void OnChanged(object sender, FileSystemEventArgs e)
         {
-            string mgs = string.Format(e.ChangeType + " - " + string.Format("{0:yyyy-MM-dd hh:mm:ss}", DateTime.Now) + " - " + "{0}", e.Name);
-            
+            string mgs = string.Format(e.ChangeType + " - " + string.Format("{0:yyyy-MM-dd HH:mm:ss}", DateTime.Now) + " - " + "{0}", e.Name);
+                    
             if (e.ChangeType.ToString().Equals("Created"))
             {
                 log.Append(mgs + "\r\n");
+                new PushNotifications(string.Format("{0:yyyy-MM-dd HH:mm:ss}", DateTime.Now), e.Name);
             }
 
             switch (directoryPath)

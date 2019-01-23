@@ -7,7 +7,7 @@ using System.Timers;
 
 namespace xerox_operations_0._0._1.utils
 {
-    class Clock
+    public class Clock
     {
         private MainForm mainForm;
 
@@ -59,6 +59,6 @@ namespace xerox_operations_0._0._1.utils
         {
             string s = hours.ToString() + ":" + minutes.ToString() + ":" + seconds.ToString();
             this.mainForm.onToolStripStatusLabelSessionTimeChanged(s);
-        }
+        }    
     }
 }

@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="api\CommunicationController.cs" />
+    <Compile Include="api\PushNotifications.cs" />
     <Compile Include="datacard\Arguments.cs" />
     <Compile Include="datacard\BidiSpl.cs" />
     <Compile Include="datacard\Datacard.cs" />

@@ -62,8 +62,7 @@ namespace xerox_operations.utils
         private void OnCreatedMaterials()
         {
             mainForm.labelFileMaterialsNames_TextChanged(getNameMaterials());
-            mainForm.labelFileMaterialsValues_TextChanged(getValuesMaterials());
-            
+            mainForm.labelFileMaterialsValues_TextChanged(getValuesMaterials());         
         }
 
         private string getNameMaterials()

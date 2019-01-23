@@ -22,6 +22,6 @@ namespace xerox_operations.values
         public const string NumID_SM_DC4 = "C72568";
         public const string NumID_SM_DC5 = "C32590";
         public const string NumID_SM_DC6 = "C32592";
-        public const string NumID_SM_DC7 = "";
+        public const string NumID_SM_DC7 = "C32593";
     }
 }

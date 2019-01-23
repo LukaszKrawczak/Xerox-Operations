@@ -109,6 +109,11 @@ namespace xerox_operations_0._0._1
             DatacardStats datacardStats6 = new DatacardStats(this, dc6);
             Thread thread_11 = new Thread(datacardStats6.getDatacardStatus);
             thread_11.Start();
+
+            Datacard dc7 = new Datacard("CD800-7", Datacards.IP_DC7, Datacards.NumID_SM_DC7);
+            DatacardStats datacardStats7 = new DatacardStats(this, dc7);
+            Thread thread_12 = new Thread(datacardStats7.getDatacardStatus);
+            thread_12.Start();
         }
 
         // Poiting window to new Location at startup
@@ -687,7 +692,7 @@ namespace xerox_operations_0._0._1
 
         private void buttonDeleteOrderOrSid_Click(object sender, EventArgs e)
         {
-            ButtonController.startAnotherApplication(@"C:\Skrypty\Usprawnienie\Usprawnienie_prod.jar");          
+            ButtonController.startAnotherApplication(@"C:\Skrypty\Usprawnienie\Usprawnienie_prod.jar");
         }
 
         private void buttonBlockCurierLabels_Click(object sender, EventArgs e)

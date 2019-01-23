@@ -10,10 +10,11 @@ D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\bin\Debu
 D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\bin\Debug\System.Web.Http.xml
 D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\bin\Debug\System.Web.Http.SelfHost.xml
 D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox_operations_0._0._1.MainForm.resources
+D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox_operations.ProgressBar.resources
 D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox_operations.Properties.Resources.resources
 D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox operations.csproj.GenerateResource.cache
 D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox operations.csproj.CoreCompileInputs.cache
 D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox operations.csproj.CopyComplete
 D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox_operations.exe
 D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox_operations.pdb
-D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox_operations.ProgressBar.resources
+D:\Users\lkrawczak\source\repos\Xerox Operations\xerox_operations_0.0.1\obj\Debug\xerox operations.csprojAssemblyReference.cache

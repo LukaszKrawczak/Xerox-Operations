@@ -119,6 +119,14 @@ namespace xerox_operations_0._0._1.datacard
                         //mainForm.dc6_StatusIndicatorChanged(convertStatusWithMessage(datacard.getPrinterMessageNumber()));
                         mainForm.dc6_LockIndicatorChanged(datacard.getLocked());
                         break;
+
+                    case Datacards.NumID_SM_DC7:
+                        mainForm.dc7_ribbonLabelChanged(datacard.getRibbonRemaining());
+                        mainForm.dc7_billingLabelChanged(datacard.getBilling());
+                        mainForm.dc7_StatusIndicatorChanged(convertStatus(datacard.getStatus()));
+                        //mainForm.dc6_StatusIndicatorChanged(convertStatusWithMessage(datacard.getPrinterMessageNumber()));
+                        mainForm.dc7_LockIndicatorChanged(datacard.getLocked());
+                        break;
                 }
             }
         }
